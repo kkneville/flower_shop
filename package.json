@@ -23,5 +23,9 @@
     "ngx-order-pipe": "^1.1.0",
     "path": "^0.12.7",
     "sort-numbers": "^1.0.3"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.7.2",
+    "@angular/core": "^5.2.7"
   }
 }

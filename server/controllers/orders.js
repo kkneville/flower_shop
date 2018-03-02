@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var User = require('../models/user');
-var Item = require('../models/item');
-var Bid = require('../models/bid');
+var Order = require('../models/order');
 var session = require('express-session');
 var sortBy = require('array-sort-by');
 

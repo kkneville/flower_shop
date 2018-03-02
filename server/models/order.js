@@ -32,7 +32,7 @@ var OrderSchema = new mongoose.Schema({
 	}],
 
 	_florist: {
-		type: mongoose.Scheme.Types.ObjectId, ref: "User"
+		type: mongoose.Schema.Types.ObjectId, ref: "User"
 	},
 
 

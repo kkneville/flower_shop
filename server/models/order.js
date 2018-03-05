@@ -22,6 +22,7 @@ var OrderSchema = new mongoose.Schema({
 	due_date: {
 		type: Date,
 		required: [true, 'Required'],
+		default: Date.now
 	},
 
 	colors: [{
@@ -44,12 +45,36 @@ var OrderSchema = new mongoose.Schema({
 		type: String
 	},	
 	
-	due_date: {
-		type: Date,
-		default: Date.now
-	}
-				      
+	shipping: {
+		type: Boolean
+	},
 
+	recipient: {
+		type: String
+	},
+
+	address1: {
+		type: String
+	},
+
+	address2: {
+		type: String
+	},
+
+	city: {
+		type: String
+	},
+
+	state: {
+		type: String
+	},
+
+	zip: {
+		type: Number
+	},
+
+
+				      
 }, {timestamps: true});
 
 module.exports = mongoose.model('Order', OrderSchema)

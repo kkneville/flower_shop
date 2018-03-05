@@ -31,7 +31,7 @@ module.exports = {
 				return res.json({error: err.errors})
 			}
 			console.log('new client saved')
-			return res.json({status: "success"})
+			return res.json({status: "success", client: client._id})
 		}) 
 	},
 

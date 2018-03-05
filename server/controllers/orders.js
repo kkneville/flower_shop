@@ -63,5 +63,39 @@ module.exports = {
 
 	},
 
+	assign: function(req, res){
+		console.log("arrived at orders/assign")
+
+		Order.findOne({_id: req.orderId}, function(err, order){
+			if(err) {
+				console.log("error finding order at orders/assign")
+				return res.json({error: err.errors})
+			}
+			console.log('here is your order: ', order)
+			User.findOne({_idL req.userId}, function(err, user){
+				if(err) {
+					console.log('error finding user')
+					return res.json({error: err.errors})
+				}
+				console.log('here is your user: ', user)
+				order._florist = user._id
+				order.florist_name = user.firstname
+				order.save(function(err){
+					if(err){
+						console.lod('error saving order')
+						return res.json({error:err.errors})
+					}
+					user._orders.push(order)
+					user.save(function(err){
+						if(err){
+							console.lod('error saving user')
+							return res.json({error:err.errors})
+						}
+					})	
+				})
+			})
+		})
+	}
+
 
 }	 		

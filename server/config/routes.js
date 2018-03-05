@@ -17,6 +17,7 @@ module.exports = (app, req, res) => {
 
 	app.post('/add', orders.add);
 
+	app.post('/assign', orders.assign);
 
 // routes to users
 

@@ -28,6 +28,11 @@ var UserSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId, ref: "Order"
 	}],
 
+	level: {
+		type: String,
+		default: "client"
+	},
+
 
 }, {timestamps: true});
 

@@ -21,11 +21,11 @@ module.exports = (app, req, res) => {
 
 // routes to users
 
-	// app.get('/users', users.index);
+	app.get('/users', users.index);
 
 	// app.post('/login', users.login);
 
-	// app.post('/new_user', users.add);
+	app.post('/new_user', users.add);
 
 
 }

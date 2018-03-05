@@ -10,7 +10,7 @@ var Client = require('../models/client');
 module.exports = {
 
 	index: function(req, res){
-		console.log("inside of index")
+		console.log("inside of orders/index")
 		Order.find({})
 			.populate('_florist')
 			.exec(function(err, orders){
@@ -19,11 +19,8 @@ module.exports = {
 				console.log("trouble finding orders at index")
 				return res.json({error:err.errors})
 			}
-			else {
-				console.log("yo, here are your orders:", orders)				
-				return res.json({orders:orders})
-
-			}
+			console.log("yo, here are your orders:", orders)				
+			return res.json({orders:orders})
 		});
 			
 	},
@@ -95,7 +92,7 @@ module.exports = {
 				})
 			})
 		})
-	}
+	},
 
 
 }	 		

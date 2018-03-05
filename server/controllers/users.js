@@ -37,4 +37,21 @@ module.exports = {
 		})	
 	},
 
+	login: function(req, res){
+		console.log("inside of users/login")
+		User.findOne({email: req.body.email}, function(err, user){
+			if (err){
+				console.log('error finding user at users/login')
+				return res.json({error:err.errors})
+			}
+			console.log("here is your user: ", user)
+			if (user.password == req.body.password) {
+				console.log("password matches")
+				return res.json({status:"success", user:user})
+			}
+			console.log('password does not match')
+			return res.json({error:"password does not match"})
+		})
+	}
+
 }

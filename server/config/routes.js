@@ -23,7 +23,7 @@ module.exports = (app, req, res) => {
 
 	app.get('/users', users.index);
 
-	// app.post('/login', users.login);
+	app.post('/login', users.login);
 
 	app.post('/new_user', users.add);
 

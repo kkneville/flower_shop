@@ -6,7 +6,7 @@ var UserSchema = require('./user');
 var OrderSchema = new mongoose.Schema({
 
 	_client: {
-		type: mongoose.Scheme.Types.ObjectId, ref: "Client"
+		type: mongoose.Schema.Types.ObjectId, ref: "Client"
 	},
 
 	size: {
@@ -19,9 +19,14 @@ var OrderSchema = new mongoose.Schema({
 		required: [true, 'Required'],
 	},
 
+	due_date: {
+		type: Date,
+		required: [true, 'Required'],
+	},
+
 	colors: [{
 		type: String
-	}]
+	}],
 
 	message: {
 		type: String

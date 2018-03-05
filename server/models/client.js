@@ -2,9 +2,9 @@ var mongoose = require('mongoose');
 var OrderSchema = require('./order');
 
 
-var UserSchema = new mongoose.Schema({
+var ClientSchema = new mongoose.Schema({
 
-	firstname: {
+		firstname: {
 		type: String,
 		required: [true, 'Required']
 	},
@@ -19,8 +19,8 @@ var UserSchema = new mongoose.Schema({
 		required: [true, 'Required']
 	},
 
-	password: {
-		type: String,
+	phone: {
+		type: Number,
 		required: [true, 'Required']
 	},
 
@@ -28,7 +28,4 @@ var UserSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId, ref: "Order"
 	}],
 
-
-}, {timestamps: true});
-
-module.exports = mongoose.model("User", UserSchema)
+})

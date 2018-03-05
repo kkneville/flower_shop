@@ -39,7 +39,16 @@ var OrderSchema = new mongoose.Schema({
 	_florist: {
 		type: mongoose.Schema.Types.ObjectId, ref: "User"
 	},
-
+	
+	florist_name: {
+		type: String
+	},	
+	
+	due_date: {
+		type: Date,
+		default: Date.now
+	}
+				      
 
 }, {timestamps: true});
 

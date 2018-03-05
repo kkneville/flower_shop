@@ -1,3 +1,6 @@
+// this page is an old example from a previous project, here for the purpose of formatting assistance only
+
+
 var mongoose = require('mongoose');
 var BidSchema = require('./bid');
 

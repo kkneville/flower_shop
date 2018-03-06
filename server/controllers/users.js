@@ -47,11 +47,22 @@ module.exports = {
 			console.log("here is your user: ", user)
 			if (user.password == req.body.password) {
 				console.log("password matches")
-				return res.json({status:"success", user:user})
+				session.user_id = user._id
+				return res.json({status:"logged-in", user:user})
 			}
 			console.log('password does not match')
 			return res.json({error:"password does not match"})
 		})
-	}
+	},
+
+	logout: function(req, res){
+	        if ('user_id' in session) {
+	            delete session['user_id'];
+	            return res.json({status:"logged-out"})
+	        }
+	},
+
+
+	
 
 }

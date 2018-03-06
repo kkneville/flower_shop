@@ -35,4 +35,30 @@ module.exports = {
 		}) 
 	},
 
+
+	login: function(req, res){
+		console.log("inside of clients/login")
+		Client.findOne({email: req.body.email}, function(err, client){
+			if (err){
+				console.log('error finding client at clients/login')
+				return res.json({error:err.errors})
+			}
+			console.log("here is your client: ", client)
+			if (client.password == req.body.password) {
+				console.log("password matches")
+				session.client_id = client._id
+				return res.json({status:"logged-in", client:client})
+			}
+			console.log('password does not match')
+			return res.json({error:"password does not match"})
+		})
+	},
+
+	logout: function(req, res){
+	        if ('client_id' in session) {
+	            delete session['client_id'];
+	            return res.json({status:"logged-out"})
+	        }
+	},
+
 }	

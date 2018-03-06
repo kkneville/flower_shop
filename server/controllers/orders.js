@@ -69,7 +69,7 @@ module.exports = {
 				return res.json({error: err.errors})
 			}
 			console.log('here is your order: ', order)
-			User.findOne({_idL req.userId}, function(err, user){
+			User.findOne({_id: req.userId}, function(err, user){
 				if(err) {
 					console.log('error finding user')
 					return res.json({error: err.errors})

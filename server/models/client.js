@@ -14,6 +14,10 @@ var ClientSchema = new mongoose.Schema({
 		required: [true, 'Required']
 	},
 
+	company: {
+		type: String
+	},
+
 	email: {
 		type: String,
 		required: [true, 'Required']

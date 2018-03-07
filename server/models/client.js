@@ -4,7 +4,7 @@ var OrderSchema = require('./order');
 
 var ClientSchema = new mongoose.Schema({
 
-		firstname: {
+	firstname: {
 		type: String,
 		required: [true, 'Required']
 	},
@@ -15,6 +15,11 @@ var ClientSchema = new mongoose.Schema({
 	},
 
 	email: {
+		type: String,
+		required: [true, 'Required']
+	},
+
+	password: {
 		type: String,
 		required: [true, 'Required']
 	},

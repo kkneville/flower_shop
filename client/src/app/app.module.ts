@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShopComponent } from './shop/shop.component';
 import { RosterComponent } from './roster/roster.component';
 import { LoginComponent } from './login/login.component';
+import { PortalComponent } from './portal/portal.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     ShopComponent,
     RosterComponent,
-    LoginComponent
+    LoginComponent,
+    PortalComponent
   ],
   imports: [
     BrowserModule

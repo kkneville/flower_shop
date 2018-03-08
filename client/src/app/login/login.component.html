@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -29,3 +31,34 @@
     </div>
   </div>
 </nav>
+
+
+<h2>Employee Login</h2>
+
+<form (submit)="onSubmit($event)">
+	<p><input 
+		type="email"
+		name="email"
+		required
+		minlength="6"
+		[(ngModel)]="user.email"
+		#email="ngModel"
+		placeholder="Email"
+		/>
+		<span *ngIf="email.errors">Invalid Email</span>
+	</p>	
+
+	<p><input
+		type="password"
+		name="password"
+		required
+		minlength="6"
+		[(ngModel)]="user.password"
+		#password="ngModel"
+		placeholder="Password"
+		/>
+		<span *ngIf="password.errors">Invalid Password</span>
+	</p>
+	
+	<p><input type="submit" value="Login"/></p>
+</form>	

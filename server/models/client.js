@@ -20,12 +20,10 @@ var ClientSchema = new mongoose.Schema({
 
 	email: {
 		type: String,
-		required: [true, 'Required']
 	},
 
 	password: {
 		type: String,
-		required: [true, 'Required']
 	},
 
 	phone: {

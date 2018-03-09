@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { MainService } from '../main.service';
 import { User } from '../user';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(
-  	private _UserService: UserService,
+  	private _MainService: MainService,
   	private _route: Router
   ) { }
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   onSubmit(event){
   	event.preventDefault();
   	console.log('attempting to log in')
-  	this._UserService.addUser(this.user, (user) => {
+  	this._MainService.addUser(this.user, (user) => {
   		if (user) {
         console.log(user);
         this._route.navigateByUrl('/shop') 

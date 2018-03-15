@@ -1,3 +1,23 @@
 <p>
   basket works!
 </p>
+
+
+
+
+<form (submit)="onSubmit($event)">
+
+
+<!-- size -->
+
+<p><input
+	type="Date"
+	name="due_date"
+	required
+	[(ngModel)]="order.due_date"
+	#due_date="ngModel"
+	/>
+</p>
+
+
+</form>	

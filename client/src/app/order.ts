@@ -1,7 +1,6 @@
 export class Order{
 	constructor (
 		public size: string = "",
-		public cost: number = 0,
 		public due_date: Date = new Date(),
 		public colors: [],
 		public message: string = "",

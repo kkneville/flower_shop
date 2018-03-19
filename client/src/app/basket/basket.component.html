@@ -19,5 +19,29 @@
 	/>
 </p>
 
+<!-- colors -->
+
+<p><input
+	type="text"
+	name="message"
+	required
+	[(ngModel)]="order.message"
+	#message="ngModel"
+	/>
+</p>
+
+<!-- add ons -->
+
+<p><input
+	type="boolean"
+	name="shipping"
+	required
+	[(ngModel)]="order.shipping"
+	#shipping="ngModel"
+	/>
+</p>
+
+
+
 
 </form>	

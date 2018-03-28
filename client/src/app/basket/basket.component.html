@@ -5,10 +5,13 @@
 
 
 
+<h1> Order Form </h1>
+
 <form (submit)="onSubmit($event)">
 
+<!-- size, needs to be a drop down menu -->
 
-<!-- size -->
+<!-- date -->
 
 <p><input
 	type="Date"
@@ -19,7 +22,9 @@
 	/>
 </p>
 
-<!-- colors -->
+<!-- colors, needs to be a drop down menu -->
+
+<!-- message -->
 
 <p><input
 	type="text"
@@ -30,7 +35,9 @@
 	/>
 </p>
 
-<!-- add ons -->
+<!-- add ons, dropdown menu -->
+
+<!-- shipping -->
 
 <p><input
 	type="boolean"
@@ -41,6 +48,8 @@
 	/>
 </p>
 
+<!-- recipient -->
+
 <p><input
 	type="text"
 	name="recipient"
@@ -49,6 +58,8 @@
 	#recipient="ngModel"
 	/>
 </p>
+
+<!-- address1 -->
 
 <p><input
 	type="text"

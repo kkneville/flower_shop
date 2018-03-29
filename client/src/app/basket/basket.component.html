@@ -11,6 +11,17 @@
 
 <!-- size, needs to be a drop down menu -->
 
+<p><select
+	name="size"
+	(ngModel)]="order.size"
+	#size="ngModel"
+	/>
+
+	<option value="small">Small</option>
+	<option value="medium">Medium</option>
+	<option value="large">Large</option>
+</p>
+
 <!-- date -->
 
 <p><input
